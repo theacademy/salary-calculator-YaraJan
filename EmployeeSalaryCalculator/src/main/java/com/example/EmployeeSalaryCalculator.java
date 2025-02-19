@@ -67,13 +67,12 @@ public class EmployeeSalaryCalculator
 				else
 				{
 					//YOUR CODE STARTS HERE
- 					grossSalary = 40 * HR;
-					 basicPay = grossSalary;
-					 HW -= 40;
-					 HR *= 2;
-					 grossSalary += HW * HR;
-
-
+ 					grossSalary = 40 * hourlyRate;
+					basicPay = grossSalary;
+					overTime = hoursWorked - 40;
+					overTimeRate = hourlyRate * 2;
+					overTimePay = overTime * overTimeRate;
+					grossSalary += overTimePay;
 
 					//YOUR CODE ENDS HERE
 				}
